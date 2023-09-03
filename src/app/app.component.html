@@ -1,0 +1,46 @@
+<body>
+  <div class="image-container" >
+     <!-- <img src="../assets/Earth-image.png" alt="Earth-image"  width="600" height="600"> -->
+     <img src="../assets/Rotating_earth_animated_transparent.gif" alt="Earth-image"  width="600" height="600">
+     
+      <div class="tool-container">
+          <h1>Currency Converter Tool</h1>
+
+          <div class="select-container">
+          <select class="selectButton" name="tool1" id="from" [(ngModel)]="selectedFromValue" (ngModelChange)="onSelectChange()">
+            <option value="USD">USD</option>
+            <option value="INR">INR</option>
+            <option value="EUR">EURO</option>
+            <option value="GBP">GBP</option>
+            <option value="CAD">CAD</option>
+            <option value="JPY">JPY</option>
+            <option value="AUD">AUD</option>
+            <option value="CHF">CHF</option>
+            <option value="CNY">CNY</option>
+            <option value="BRL">BRL</option>
+
+          </select>
+             <div class="to">to</div>
+
+          <select class="selectButton" name="tool2" id="to" [(ngModel)]="selectedToValue" (ngModelChange)="onSelectChange2(selectedToValue)">
+            <option value="USD">USD</option>
+            <option value="INR">INR</option>
+            <option value="EUR">EURO</option>
+            <option value="GBP">GBP</option>
+            <option value="CAD">CAD</option>
+            <option value="JPY">JPY</option>
+            <option value="AUD">AUD</option>
+            <option value="CHF">CHF</option>
+            <option value="CNY">CNY</option>
+            <option value="BRL">BRL</option>
+          </select>
+        </div>
+        <div class="result"> Result : 1 {{selectedFromValue}} = {{result}} {{selectedToValue}} </div>        
+      </div>
+  </div>
+  
+
+</body>
+
+
+<!-- api url = https://api.exchangerate.host/latest?symbols=INR&base=USD -->
